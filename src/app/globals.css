@@ -1,10 +1,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --gray-100: #E6E6E6;
+  --gray-200: #B0B0B0;
+  --gray-300: #8a8a8a;
+  --gray-400: #545454;
+  --violet-50: #f1ebfd;
+  --violet-100: #d3c2f8;
+  --violet-200: #bda5f4;
+  --violet-300: #9f7cef;
+  --violet-400: #8d62ec;
+  --violet-500: #703be7;
+  --violet-600: #6636d2;
+  --violet-700: #502aa4;
+  --violet-800: #3e207f;
+  --blue-50: #e9e9ef;
+  --blue-100: #BABACE;
+  --blue-200: #9899b7;
+  --blue-300: #696b96;
+  --blue-400: #4c4e81;
+  --blue-500: #1f2262;
+  --blue-600: #1c1f59;
+  --blue-700: #161846;
+  --blue-800: #111336;
+  --orange-50: #111336;
+  --orange-100: #ffd9d2;
+  --orange-200: #ffc6bd;
+  --orange-300: #fead9f;
+  --orange-400: #fe9d8c;
+  --orange-500: #fe846f;
+  --orange-600: #e77865;
+  --orange-700: #b45e4f;
+  --orange-800: #ffd9d2;
+  --gradient: linear-gradient(to right bottom, #7f52ff, #FB8570);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,14 +47,7 @@
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.border-gradient{
+  border: 3px solid transparent;  /* Create space for the border */
+  border-image: repeating-linear-gradient(45deg, #7f52ff 0%, #FB8570 2%, transparent 2%, transparent 4%) 1;
 }
