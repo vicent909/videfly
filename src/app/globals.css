@@ -68,6 +68,27 @@
   pointer-events: none;
 }
 
+.gradientBorder2 {
+  position: relative;
+  display: flex;
+  width: fit-content;
+}
+
+.gradientBorder2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  padding: 1px; /* control the border thickness */
+  background: linear-gradient(to right, #33B0EA, #703BE7);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+}
+
 .border-gradient{
   border: 3px solid transparent;  /* Create space for the border */
   border-image: repeating-linear-gradient(45deg, #7f52ff 0%, #FB8570 2%, transparent 2%, transparent 4%) 1;

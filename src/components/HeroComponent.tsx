@@ -151,7 +151,7 @@ export default function HeroComponent() {
             onClick={() => setSelected("")}
             className="w-[50px] aspect-square bg-neutral-100 flex items-center justify-center rounded-full hover:bg-gradient-to-br from-[#7f52ff] to-[#FB8570] mb-[20px] cursor-pointer"
           >
-            <p className="text-neutral-400 font-bold text-[28px] flex items-center justify-center pb-[1px]">
+            <p className="text-neutral-400 font-nunito text-[28px] flex items-center justify-center pb-[2px]">
               x
             </p>
           </div>

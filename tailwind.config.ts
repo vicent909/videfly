@@ -52,7 +52,7 @@ const config: Config = {
           700: 'var(--orange-700)',
           800: 'var(--orange-800)',
         },
-        'main-gradient': 'var(--gradient)' 
+        'main-bg': '#F5F5F5' 
       },
       fontFamily: {
         nunito: ['Nunito', 'sans-serif'],
