@@ -1,4 +1,5 @@
 import HeroComponent from "@/components/HeroComponent";
+import IntroductionComponents from "@/components/IntroductionComponents";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
 
@@ -9,7 +10,11 @@ export default function Home() {
       <div className="flex-grow">
         <HeroComponent />
       </div>
-      <div className="min-h-screen bg-red-50">a</div>
+      <section id="#kedua">
+        <div className="min-h-screen">
+          <IntroductionComponents />
+        </div>
+      </section>
     </div>
   );
 }

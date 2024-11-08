@@ -74,8 +74,8 @@ export default function HeroComponent() {
           <div className="border-[#545454] border-[1px] rounded-[24px] w-fit px-[15px] py-[10px] cursor-pointer ">
             <p>Auto Caption</p>
           </div>
-          <div className="border-[#545454] border-[1px] rounded-[24px] w-fit px-[15px] py-[10px] cursor-pointer ">
-            <p>URL to Video</p>
+          <div className="border-[1px] rounded-[24px] w-fit cursor-pointer gradientBorder">
+            <p className="bg-gradient-to-br from-[#7f52ff] to-[#FB8570] bg-clip-text text-transparent">URL to Video</p>
           </div>
           <div className="border-[#545454] border-[1px] rounded-[24px] w-fit px-[15px] py-[10px] cursor-pointer ">
             <p>Content Calendar</p>
@@ -87,8 +87,9 @@ export default function HeroComponent() {
       </div>
       <motion.div
         transition={{
-          ease: "easeInOut",
-          duration: 1,
+          type: "spring",
+          stiffness: 300,
+          damping: 30,
         }}
         className="flex flex-col items-center justify-center h-full pr-[30px] "
       >
@@ -116,34 +117,45 @@ export default function HeroComponent() {
         >
           <PencilStar color={isHover === "pencil" ? "#ffffff" : "#545454"} />
         </div>
-        {isOpen && (
-          <>
-            <div
-              onMouseEnter={() => setIsHover("video2")}
-              onMouseLeave={() => setIsHover("")}
-              onClick={() => setSelected("video2")}
-              className="w-[50px] aspect-square bg-neutral-100 flex items-center justify-center rounded-full hover:bg-gradient-to-br from-[#7f52ff] to-[#FB8570] mb-[20px] cursor-pointer"
-            >
-              <VideoLogo color={isHover === "video2" ? "#ffffff" : "#545454"} />
-            </div>
-            <div
-              onMouseEnter={() => setIsHover("user2")}
-              onMouseLeave={() => setIsHover("")}
-              onClick={() => setSelected("video5")}
-              className="w-[50px] aspect-square bg-neutral-100 flex items-center justify-center rounded-full hover:bg-gradient-to-br from-[#7f52ff] to-[#FB8570] mb-[20px] cursor-pointer"
-            >
-              <UserStar color={isHover === "user2" ? "#ffffff" : "#545454"} />
-            </div>
-            <div
-              onClick={() => setSelected("")}
-              className="w-[50px] aspect-square bg-neutral-100 flex items-center justify-center rounded-full hover:bg-gradient-to-br from-[#7f52ff] to-[#FB8570] mb-[20px] cursor-pointer"
-            >
-              <p className="text-neutral-400 font-bold text-[28px] flex items-center justify-center pb-[1px]">
-                x
-              </p>
-            </div>
-          </>
-        )}
+        <motion.div
+          initial={{ height: "0px", opacity: 1}}
+          animate={{
+            height: isOpen ? "auto" : "0px",
+            opacity: isOpen ? 1 : 1,
+            // y: isOpen ? 0 : 1000
+          }}
+          transition={{
+            type: "spring",
+            stiffness: 300,
+            damping: 30,
+          }}
+          className="overflow-hidden"
+        >
+          <div
+            onMouseEnter={() => setIsHover("video2")}
+            onMouseLeave={() => setIsHover("")}
+            onClick={() => setSelected("video2")}
+            className="w-[50px] aspect-square bg-neutral-100 flex items-center justify-center rounded-full hover:bg-gradient-to-br from-[#7f52ff] to-[#FB8570] mb-[20px] cursor-pointer"
+          >
+            <VideoLogo color={isHover === "video2" ? "#ffffff" : "#545454"} />
+          </div>
+          <div
+            onMouseEnter={() => setIsHover("user2")}
+            onMouseLeave={() => setIsHover("")}
+            onClick={() => setSelected("video5")}
+            className="w-[50px] aspect-square bg-neutral-100 flex items-center justify-center rounded-full hover:bg-gradient-to-br from-[#7f52ff] to-[#FB8570] mb-[20px] cursor-pointer"
+          >
+            <UserStar color={isHover === "user2" ? "#ffffff" : "#545454"} />
+          </div>
+          <div
+            onClick={() => setSelected("")}
+            className="w-[50px] aspect-square bg-neutral-100 flex items-center justify-center rounded-full hover:bg-gradient-to-br from-[#7f52ff] to-[#FB8570] mb-[20px] cursor-pointer"
+          >
+            <p className="text-neutral-400 font-bold text-[28px] flex items-center justify-center pb-[1px]">
+              x
+            </p>
+          </div>
+        </motion.div>
         {/* for plus */}
         <div
           onClick={() => setIsOpen(!isOpen)}
