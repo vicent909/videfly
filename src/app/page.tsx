@@ -1,5 +1,6 @@
 import CallCenterComponent from "@/components/CallCenterComponent";
 import FAQComponent from "@/components/FAQComponent";
+import FooterComponent from "@/components/FooterComponent";
 import HeroComponent from "@/components/HeroComponent";
 import IntroductionComponents from "@/components/IntroductionComponents";
 import Navbar from "@/components/Navbar";
@@ -49,6 +50,11 @@ export default function Home() {
       <section id="#call-center">
         <div className="">
           <CallCenterComponent />
+        </div>
+      </section>
+      <section id="#footer">
+        <div className="">
+          <FooterComponent />
         </div>
       </section>
     </div>
