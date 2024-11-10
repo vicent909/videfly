@@ -5,7 +5,7 @@ import React from "react";
 
 export default function FAQComponent() {
   return (
-    <div className="w-5/6 mx-auto flex py-[88px]">
+    <div className="w-5/6 mx-auto flex py-[88px] gap-[45px]">
       <div className="w-1/2">
         <div className="flex items-center border-[1px] px-[11px] py-[2px] gap-[7px] rounded-full border-primary-violet-500 cursor-pointer w-fit">
           <Diamond color="#703be7" width={13} height={13} />
