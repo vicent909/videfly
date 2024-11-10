@@ -34,6 +34,7 @@ import Qory from "./qory.png";
 import BOALogo from "./BoA-Logo.png";
 import Devin from "./devin.png";
 import SelfmologyLogo from "./Selfmology-Logo.png";
+import Mockup from "./mockup.png";
 
 export {
   VideflyLogo,
@@ -72,4 +73,5 @@ export {
   BOALogo,
   Devin,
   SelfmologyLogo,
+  Mockup,
 };

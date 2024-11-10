@@ -1,3 +1,5 @@
+import CallCenterComponent from "@/components/CallCenterComponent";
+import FAQComponent from "@/components/FAQComponent";
 import HeroComponent from "@/components/HeroComponent";
 import IntroductionComponents from "@/components/IntroductionComponents";
 import Navbar from "@/components/Navbar";
@@ -14,17 +16,17 @@ export default function Home() {
       <div className="h-screen">
         <HeroComponent />
       </div>
-      <section id="#kedua">
+      <section id="#introduction">
         <div className="min-h-screen">
           <IntroductionComponents />
         </div>
       </section>
-      <section id="#stepLight">
+      <section id="#step-light">
         <div className="min-h-screen">
           <StepLightComponent />
         </div>
       </section>
-      <section id="#valuePoint">
+      <section id="#value-point">
         <div className="h-fit">
           <ValuePointComponent />
         </div>
@@ -41,7 +43,12 @@ export default function Home() {
       </section>
       <section id="#faq">
         <div className="">
-          <ReviewComponent />
+          <FAQComponent />
+        </div>
+      </section>
+      <section id="#call-center">
+        <div className="">
+          <CallCenterComponent />
         </div>
       </section>
     </div>
