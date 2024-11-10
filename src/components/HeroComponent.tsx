@@ -53,7 +53,7 @@ export default function HeroComponent() {
         <div>
           <div className="flex items-center gap-4">
             <p className="font-nunito font-extrabold text-[64px]">Sulap</p>
-            <LinkProduk />
+            <LinkProduk title="Link Produk" />
           </div>
           <p className="font-nunito font-extrabold text-[64px] ">
             Jadi Video dalam <br />
