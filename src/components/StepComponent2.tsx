@@ -7,7 +7,7 @@ export default function StepComponent2({ isInView }: { isInView: boolean }) {
     <motion.div
       initial={{
         y: -80,
-        x: 1000,
+        x: 2000,
         opacity: 1
       }}
       animate={

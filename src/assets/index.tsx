@@ -25,6 +25,15 @@ import Potrait1 from "./potrait1.gif";
 import Potrait2 from "./potrait2.gif";
 import Potrait3 from "./potrait3.gif";
 import Potrait4 from "./potrait4.gif";
+import Enzella from "./enzela.png";
+import MasterBagasiLogo from "./Master-Bagasi-Logo.png";
+import Mario from "./mario.png";
+import FemalePreneur from "./Femalepreneur-Logo.png";
+import Nadia from "./nadia.png";
+import Qory from "./qory.png";
+import BOALogo from "./BoA-Logo.png";
+import Devin from "./devin.png";
+import SelfmologyLogo from "./Selfmology-Logo.png";
 
 export {
   VideflyLogo,
@@ -54,4 +63,13 @@ export {
   Potrait2,
   Potrait3,
   Potrait4,
+  Enzella,
+  MasterBagasiLogo,
+  Mario,
+  FemalePreneur,
+  Nadia,
+  Qory,
+  BOALogo,
+  Devin,
+  SelfmologyLogo,
 };
