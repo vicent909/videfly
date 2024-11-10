@@ -57,7 +57,7 @@ export default function ReviewComponent() {
     {
       id: 4,
       name: "Davin Wilbert",
-      title: "Co-Founder Master Bagasi",
+      title: "Owner Selfmology",
       image: Devin,
       logo: SelfmologyLogo,
       text: "Videfly bikin Selfmology bisa buat video produk kecantikan secara otomatis, jadi nggak perlu ribet lagi! Semua konten promosi jadi cepet selesai, kita bisa fokus banget ke produk, sementara video tetap keren dan langsung ready.",
@@ -87,7 +87,6 @@ export default function ReviewComponent() {
             }`}
             onClick={() => {
               setSelected(selected - 1);
-              console.log(selected);
             }}
           >
             <Arrow width={59} height={59} />
@@ -125,7 +124,7 @@ export default function ReviewComponent() {
                 animate={{
                   scale: i < selected ? 0.2 : 1,
                 }}
-                exit={{ opacity: 0, x: i < selected ? -1000 : 100 }}
+                // exit={{ opacity: 0, x: i < selected ? -1000 : 100 }}
                 transition={{ duration: 0.5 }}
                 ref={ref}
               >
