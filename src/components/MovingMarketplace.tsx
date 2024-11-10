@@ -20,13 +20,13 @@ export default function MovingMarketplace() {
 
   useEffect(() => {
     let controls;
-    let finalPosition = -width - (marketplace.length - 2 * 80);
+    let finalPosition = -width - 80;
 
     controls = animate(xTranslation, [0, finalPosition], {
       ease: "linear",
-      duration: 60,
+      duration: 10,
       repeat: Infinity,
-      repeatType: 'loop',
+      repeatType: "loop",
       repeatDelay: 0,
     });
 
@@ -34,10 +34,17 @@ export default function MovingMarketplace() {
   }, [xTranslation, width]);
 
   return (
-    <motion.div className="absolute bottom-11 w-full flex items-center gap-[80px]" ref={ref} style={{ x: xTranslation }}>
-      {[...marketplace, ...marketplace].map((e, i) => {
-        return <Image alt="image" src={e} key={i} />;
-      })}
-    </motion.div>
+    <div>
+      <motion.div className="absolute bottom-11 w-fit flex items-center gap-[80px]" style={{x: xTranslation}}>
+        {[...marketplace, ...marketplace, ...marketplace].map((e, i) => {
+          return <Image alt="image" src={e} key={i} />;
+        })}
+      </motion.div>
+      <div className="absolute bottom-11 w-fit flex items-center gap-[80px] opacity-0" ref={ref}>
+        {marketplace.map((e, i) => {
+          return <Image alt="image" src={e} key={i} />;
+        })}
+      </div>
+    </div>
   );
 }

@@ -17,22 +17,24 @@ import {
 } from "@/assets";
 import { Camera10, MultiFormat, Templates } from "@/assets/SVG";
 import Image from "next/image";
-import React from "react";
+import React, { useRef } from "react";
 import SlidingTemplates from "./SlidingTemplates";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 export default function ValuePointComponent() {
+  const ref1 = useRef(null)
+  const isInView1 = useInView(ref1, { once: true, amount: 0.5 })
   return (
-    <div className="flex flex-col w-5/6 mx-auto gap-[30px] h-fit">
+    <div className="flex flex-col w-5/6 mx-auto gap-[30px] h-fit py-[50px] overflow-hidden relative">
       <motion.div
         initial={{
           x: "-100%",
           opacity: 0,
         }}
-        whileInView={{
+        animate={ isInView1 ? {
           x: 0,
           opacity: 1,
-        }}
+        } : {}}
         viewport={{
           once: true,
         }}
@@ -79,10 +81,10 @@ export default function ValuePointComponent() {
           x: "100%",
           opacity: 0,
         }}
-        whileInView={{
+        animate={ isInView1 ? {
           x: 0,
           opacity: 1,
-        }}
+        } : {}}
         viewport={{
           once: true,
         }}
@@ -108,6 +110,7 @@ export default function ValuePointComponent() {
           </p>
         </div>
       </motion.div>
+      <div className="absolute bottom-0 h-1/2" ref={ref1}></div>
     </div>
   );
 }

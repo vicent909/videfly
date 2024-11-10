@@ -255,7 +255,7 @@ export default function StepLightComponent() {
           <p className="text-primary-violet-500 text-[11px]">Color</p>
         </div>
       </motion.div>
-      <div className="absolute top-[50%]" ref={ref}></div>
+      <div className="absolute bg-red-50 top-[70%]" ref={ref}></div>
     </div>
   );
 }
