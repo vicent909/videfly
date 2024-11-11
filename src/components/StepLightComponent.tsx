@@ -20,13 +20,15 @@ import React, { useRef } from "react";
 import { delay, motion, useInView } from "framer-motion";
 import StepComponent1 from "./StepComponent1";
 import StepComponent2 from "./StepComponent2";
+import StepComponent1Mobile from "./StepComponent1Mobile";
+import StepComponent2Mobile from "./StepComponentMobile";
 
 export default function StepLightComponent() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.5 });
 
   return (
-    <div className="h-screen bg-main-bg flex justify-center relative overflow-hidden">
+    <div className="lg:h-screen h-fit flex justify-center relative overflow-x-hidden">
       <motion.div
         initial={{
           opacity: 0,
@@ -44,7 +46,7 @@ export default function StepLightComponent() {
           delay: 3.4,
           type: "spring",
         }}
-        className="h-full absolute flex items-end justify-center w-full"
+        className="h-full absolute flex lg:items-end items-center justify-center w-full"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -55,10 +57,6 @@ export default function StepLightComponent() {
           fill="none"
         >
           <rect width="1286" height="1085" fill="url(#pattern0_3499_125631)" />
-          {/* <path
-            d="M127 24C127 15.7157 133.716 9 142 9H1142C1150.28 9 1157 15.7157 1157 24V684H127V24Z"
-            fill="url(#pattern1_3499_125631)"
-          /> */}
           <clipPath id="videoClipPath">
             <path d="M127 24C127 15.7157 133.716 9 142 9H1142C1150.28 9 1157 15.7157 1157 24V684H127V24Z" />
           </clipPath>
@@ -137,16 +135,18 @@ export default function StepLightComponent() {
             type: "spring",
             opacity: { delay: 3 },
           }}
-          className=" flex flex-col items-center"
+          className=" flex flex-col items-center px-[18px]"
         >
           <div className="flex items-center border-[1px] px-[11px] py-[2px] gap-[7px] rounded-full border-primary-violet-500 cursor-pointer ">
             <Diamond color="#703be7" width={13} height={13} />
-            <p className="text-primary-violet-500 text-[16px]">CARA KERJA</p>
+            <p className="text-primary-violet-500 lg:text-[16px] text-[12px]">
+              CARA KERJA
+            </p>
           </div>
-          <p className="font-nunito font-bold text-[48px] mt-[10px]">
+          <p className="font-nunito font-bold text-center lg:text-[48px] text-[30px] mt-[10px]">
             Bikin Video cuma dari Link Produk
           </p>
-          <p className="text-[18px] text-neutral-400 mt-[20px] ">
+          <p className="text-[12px] lg:text-[18px] text-neutral-400 mt-[20px] text-center ">
             Cukup copy-paste link produk, hasilkan video menarik tanpa skill
             editing
           </p>
@@ -172,11 +172,19 @@ export default function StepLightComponent() {
             opacity: { delay: 3 },
           }}
         >
-          <Image alt="step" src={StepPng} className="h-fit" />
+          <Image
+            alt="step"
+            src={StepPng}
+            className="h-fit px-[38px] mt-[50px] lg:px-0 lg:mt-0"
+          />
         </motion.div>
       </div>
       <StepComponent1 isInView={isInView} />
+      <StepComponent1Mobile isInView={isInView} />
       <StepComponent2 isInView={isInView} />
+      <StepComponent2Mobile isInView={isInView} />
+
+      {/* desktop */}
       <motion.div
         initial={{
           y: -400,
@@ -198,7 +206,7 @@ export default function StepLightComponent() {
           type: "spring",
           opacity: { delay: 3 },
         }}
-        className="absolute bg-white z-30 bottom-0 p-[10px] w-[86px] rounded-xl shadow-navbar flex flex-col gap-[8px] "
+        className="absolute bg-white z-30 bottom-0 p-[10px] w-[86px] rounded-xl shadow-navbar hidden lg:flex flex-col gap-[8px] "
       >
         <div className="flex py-[12px] items-center flex-col justify-center bg-[#f5f5f5] rounded-[10px]">
           <Templates color="#703be7" />
@@ -234,7 +242,7 @@ export default function StepLightComponent() {
           type: "spring",
           opacity: { delay: 3 },
         }}
-        className="absolute bg-white z-30 bottom-0 p-[10px] w-[86px] rounded-xl shadow-navbar flex flex-col gap-[8px] "
+        className="absolute bg-white z-30 bottom-0 p-[10px] w-[86px] rounded-xl shadow-navbar hidden lg:flex flex-col gap-[8px] "
       >
         <div className="flex py-[12px] items-center flex-col justify-center bg-[#f5f5f5] rounded-[10px]">
           <Ai color="#703be7" />
@@ -255,6 +263,86 @@ export default function StepLightComponent() {
           <p className="text-primary-violet-500 text-[11px]">Color</p>
         </div>
       </motion.div>
+      {/* end of desktop */}
+
+      {/* mobile */}
+      <motion.div
+        initial={{
+          x: 1000,
+          opacity: 1,
+        }}
+        animate={
+          isInView
+            ? {
+                x: 0,
+                opacity: 0,
+              }
+            : {}
+        }
+        transition={{
+          duration: 1,
+          ease: "easeInOut",
+          delay: 0.8,
+          type: "spring",
+          opacity: { delay: 3 },
+        }}
+        className="absolute bg-white z-30 bottom-[20%] right-[10%] p-[2px] w-[19px] rounded-sm shadow-navbar flex flex-col gap-[2px] lg:hidden"
+      >
+        <div className="flex py-[2.5px] px-[2.5px] items-center flex-col justify-center bg-[#f5f5f5] rounded-[3px]">
+          <Templates width={5.8} height={5.8} color="#703be7"  />
+          <p className="text-primary-violet-500 text-[3px] truncate">Templates</p>
+        </div>
+        <div className="flex py-[2.5px] items-center flex-col justify-center bg-[#f5f5f5] rounded-[3px]">
+          <Elements width={5.8} height={5.8} color="#703be7" />
+          <p className="text-primary-violet-500 text-[3px] truncate">Elements</p>
+        </div>
+        <div className="flex py-[2.5px] items-center flex-col justify-center bg-[#f5f5f5] rounded-[3px]">
+          <BrandKit width={5.8} height={5.8} color="#703be7" />
+          <p className="text-primary-violet-500 text-[3px] truncate">Brand Kits</p>
+        </div>
+      </motion.div>
+      <motion.div
+        initial={{
+          x: -1000,
+          opacity: 1,
+        }}
+        animate={
+          isInView
+            ? {
+                x: 0,
+                opacity: 0,
+              }
+            : {}
+        }
+        transition={{
+          duration: 1,
+          ease: "easeInOut",
+          delay: 0.8,
+          type: "spring",
+          opacity: { delay: 3 },
+        }}
+        className="absolute bg-white z-30 bottom-[25%] left-[10%] p-[2px] w-[19px] rounded-sm shadow-navbar flex flex-col gap-[2px] lg:hidden"
+      >
+        <div className="flex py-[2.5px] items-center flex-col justify-center bg-[#f5f5f5] rounded-[3px]">
+          <Ai width={5.8} height={5.8} color="#703be7" />
+          <p className="text-primary-violet-500 text-[3px]">Ask AI</p>
+        </div>
+        <div className="flex py-[2.5px] items-center flex-col justify-center bg-[#f5f5f5] rounded-[3px]">
+          <RemoveBg width={5.8} height={5.8} color="#703be7" />
+          <p className="text-primary-violet-500 text-[3px] w-[12px] truncate">
+            Remove Background
+          </p>
+        </div>
+        <div className="flex py-[2.5px] items-center flex-col justify-center bg-[#f5f5f5] rounded-[3px]">
+          <Blur width={5.8} height={5.8} color="#703be7" />
+          <p className="text-primary-violet-500 text-[3px]">Blur</p>
+        </div>
+        <div className="flex py-[2.5px] items-center flex-col justify-center bg-[#f5f5f5] rounded-[3px]">
+          <ColorIcon width={5.8} height={5.8} color="#703be7" />
+          <p className="text-primary-violet-500 text-[3px]">Color</p>
+        </div>
+      </motion.div>
+      {/* end of mobile */}
       <div className="absolute bg-red-50 top-[70%]" ref={ref}></div>
     </div>
   );

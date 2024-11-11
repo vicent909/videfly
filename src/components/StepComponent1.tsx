@@ -25,7 +25,7 @@ export default function StepComponent1({ isInView }: { isInView: boolean }) {
         type: "spring",
         opacity: {delay: 3}
       }}
-      className="absolute bg-white z-30 bottom-0 py-[10px] px-[15px] rounded-xl shadow-navbar "
+      className="absolute bg-white z-30 bottom-0 py-[10px] px-[15px] rounded-xl shadow-navbar hidden lg:inline"
     >
       <div>
         <p className="font-semibold text-[12px]  ">
