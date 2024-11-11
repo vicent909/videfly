@@ -35,14 +35,14 @@ export default function MovingMarketplace() {
 
   return (
     <div>
-      <motion.div className="absolute bottom-11 w-fit flex items-center gap-[80px]" style={{x: xTranslation}}>
+      <motion.div className="absolute bottom-5 lg:bottom-10 w-fit flex items-center lg:gap-[80px] gap-[40px]" style={{x: xTranslation}}>
         {[...marketplace, ...marketplace, ...marketplace].map((e, i) => {
-          return <Image alt="image" src={e} key={i} />;
+          return <Image alt="image" src={e} key={i} className="h-[22px] lg:h-[54px]" />;
         })}
       </motion.div>
-      <div className="absolute bottom-11 w-fit flex items-center gap-[80px] opacity-0" ref={ref}>
+      <div className="absolute bottom-5 lg:bottom-10 w-fit flex items-center lg:gap-[80px] gap-[40px] opacity-0" ref={ref}>
         {marketplace.map((e, i) => {
-          return <Image alt="image" src={e} key={i} />;
+          return <Image alt="image" src={e} key={i} className="h-[22px] lg:h-[54px]" />;
         })}
       </div>
     </div>

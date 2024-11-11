@@ -40,8 +40,6 @@ export default function HeroComponent() {
     } else if (x >= 50 && imgIdx > 0) {
       setImgIdx((pv) => pv - 1);
     }
-
-    console.log(num);
   };
 
   const dragX = useMotionValue(0);

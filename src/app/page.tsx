@@ -16,14 +16,13 @@ export default function Home() {
       <Navbar />
       <div className="lg:h-screen h-fit">
         <HeroComponent />
-        <div className="h-screen bg-white"></div>
       </div>
-      {/* <section id="#introduction">
+      <section id="#introduction">
         <div className="min-h-screen">
           <IntroductionComponents />
         </div>
       </section>
-      <section id="#step-light">
+      {/* <section id="#step-light">
         <div className="min-h-screen">
           <StepLightComponent />
         </div>
