@@ -14,10 +14,11 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       <Navbar />
-      <div className="h-screen">
+      <div className="lg:h-screen h-fit">
         <HeroComponent />
+        <div className="h-screen bg-white"></div>
       </div>
-      <section id="#introduction">
+      {/* <section id="#introduction">
         <div className="min-h-screen">
           <IntroductionComponents />
         </div>
@@ -56,7 +57,7 @@ export default function Home() {
         <div className="">
           <FooterComponent />
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

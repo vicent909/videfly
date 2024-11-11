@@ -1,13 +1,14 @@
+import { LogoWhite } from "@/assets";
 import Image from "next/image";
 import React from "react";
 
 export default function FooterComponent() {
   return (
-    <div className={`w-screen text-white p-2 md:p-4 bg-[#703BE7]`}>
+    <div className={`w-full text-white p-2 md:p-4 bg-[#703BE7]`}>
       <div className="flex flex-col md:flex-row justify-evenly gap-3 md:gap-1 py-8">
         <div className="md:hidden flex flex-col p-4">
           <Image
-            src={"/new-landing-page-asset/videfly-white-logo.svg"}
+            src={LogoWhite}
             width={70}
             height={30}
             alt="Videfly"
@@ -74,26 +75,6 @@ export default function FooterComponent() {
             </ul>
           </div>
           <div>
-            <p className="text-sm">Studio</p>
-            <ul className="text-xs text-gray-300">
-              <li className="py-1">
-                <a href={"#"} className="hover:text-white">
-                  Photos
-                </a>
-              </li>
-              <li className="py-1">
-                <a href={"#"} className="hover:text-white">
-                  Videos
-                </a>
-              </li>
-              <li className="py-1">
-                <a href={"#"} className="hover:text-white">
-                  Models
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
             <p className="text-sm">User Terms</p>
             <ul className="text-xs text-gray-300">
               <li className="py-1">
@@ -118,7 +99,7 @@ export default function FooterComponent() {
         {/* Desktop view */}
         <div className="hidden md:flex md:flex-col max-w-[40%]">
           <Image
-            src={"/new-landing-page-asset/videfly-white-logo.svg"}
+            src={LogoWhite}
             width={70}
             height={30}
             alt="Videfly"
@@ -153,26 +134,6 @@ export default function FooterComponent() {
             <li className="py-1">
               <a href={"#"} className="hover:text-white">
                 About
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div className="hidden md:block">
-          <p className="text-base">Studio</p>
-          <ul className="text-sm text-gray-300">
-            <li className="py-1">
-              <a href={"#"} className="hover:text-white">
-                Photos
-              </a>
-            </li>
-            <li className="py-1">
-              <a href={"#"} className="hover:text-white">
-                Videos
-              </a>
-            </li>
-            <li className="py-1">
-              <a href={"#"} className="hover:text-white">
-                Models
               </a>
             </li>
           </ul>
