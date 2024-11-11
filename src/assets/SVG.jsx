@@ -714,6 +714,31 @@ const ChevronDown = ({ width = 24, height = 24, color = "#000000" }) => {
   );
 };
 
+const NavbarBurger = ({ width = 24, height = 24, color = "#000000" }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={width}
+      height={height}
+      viewBox="0 0 23 15"
+      fill="none"
+    >
+      <path
+        d="M22.5424 6.52148H0.982361V8.48148H22.5424V6.52148Z"
+        fill="black"
+      />
+      <path
+        d="M22.5424 0.640625H0.982361V2.60062H22.5424V0.640625Z"
+        fill="black"
+      />
+      <path
+        d="M22.5424 12.4004H0.982361V14.3604H22.5424V12.4004Z"
+        fill="black"
+      />
+    </svg>
+  );
+};
+
 export {
   UserStar,
   PencilStar,
@@ -739,5 +764,6 @@ export {
   Checklist2,
   ChecklistLainnya,
   Arrow,
-  ChevronDown
+  ChevronDown,
+  NavbarBurger,
 };

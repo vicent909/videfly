@@ -68,6 +68,27 @@
   pointer-events: none;
 }
 
+.gradientBorderMobile {
+  position: relative;
+  padding: 6px 9px;
+  display: inline-block;
+}
+
+.gradientBorderMobile::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  padding: 1px; /* control the border thickness */
+  background: linear-gradient(to right bottom, #7f52ff, #FB8570);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+}
+
 .gradientBorder2 {
   position: relative;
   display: flex;

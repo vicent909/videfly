@@ -12,13 +12,13 @@ import {
 } from "@/assets";
 import { Arrow, Diamond } from "@/assets/SVG";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ReviewCard from "./ReviewCard";
 import { motion } from "framer-motion";
 import useMeasure from "react-use-measure";
 
 export default function ReviewComponent() {
-  const [ref, { width }] = useMeasure();
+  const [ref, { width, height }] = useMeasure();
 
   const [selected, setSelected] = useState(0);
   const data = [
@@ -64,6 +64,10 @@ export default function ReviewComponent() {
     },
   ];
 
+  useEffect(() => {
+    console.log(height)
+  }, [11])
+
   return (
     <div className="h-screen  flex ">
       <div className="w-5/12 py-[100px] px-[120px] flex flex-col justify-between">
@@ -81,8 +85,18 @@ export default function ReviewComponent() {
           </p>
         </div>
         <div className="flex gap-[20px] z-40">
-          <div
-            className={`bg-white w-fit p-[11px] rounded-full rotate-180 cursor-pointer ${
+          <motion.div
+            initial={{
+              scale: 1,
+              rotate: 180
+            }}
+            whileHover={{
+              scale: 1.1
+            }}
+            whileTap={{
+              scale: 0.9
+            }}
+            className={`bg-white w-fit p-[11px] rounded-full cursor-pointer relative ${
               selected === 0 ? "pointer-events-none" : ""
             }`}
             onClick={() => {
@@ -93,8 +107,17 @@ export default function ReviewComponent() {
             {selected === 0 && (
               <div className="bg-neutral-200 absolute h-full w-full rounded-full top-0 left-0 flex-shrink-0 opacity-70" />
             )}
-          </div>
-          <div
+          </motion.div>
+          <motion.div
+            initial={{
+              scale: 1
+            }}
+            whileHover={{
+              scale: 1.1
+            }}
+            whileTap={{
+              scale: 0.9
+            }}
             className={`bg-white w-fit p-[11px] rounded-full cursor-pointer relative ${
               selected === data.length - 1 ? "pointer-events-none" : ""
             }`}
@@ -104,7 +127,7 @@ export default function ReviewComponent() {
             {selected === data.length - 1 && (
               <div className="bg-neutral-200 absolute h-full w-full rounded-full top-0 left-0 opacity-70" />
             )}
-          </div>
+          </motion.div>
         </div>
       </div>
       <motion.div className="w-7/12 flex overflow-x-hidden py-[10px]">

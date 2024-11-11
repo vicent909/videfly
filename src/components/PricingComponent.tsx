@@ -144,7 +144,7 @@ export default function PricingComponent() {
                     maxValue={2}
                     minValue={0}
                     defaultValue={0}
-                    className="max-w-md !my-0"
+                    className="w-full !my-0"
                     classNames={{
                       step: "bg-primary-violet-500",
                       base: "bg-white rounded-full ",

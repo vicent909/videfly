@@ -1,5 +1,6 @@
 import CallCenterComponent from "@/components/CallCenterComponent";
 import FAQComponent from "@/components/FAQComponent";
+import FooterComponent from "@/components/FooterComponent";
 import HeroComponent from "@/components/HeroComponent";
 import IntroductionComponents from "@/components/IntroductionComponents";
 import Navbar from "@/components/Navbar";
@@ -13,7 +14,7 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       <Navbar />
-      <div className="h-screen">
+      <div className="lg:h-screen h-fit">
         <HeroComponent />
       </div>
       <section id="#introduction">
@@ -21,7 +22,7 @@ export default function Home() {
           <IntroductionComponents />
         </div>
       </section>
-      <section id="#step-light">
+      {/* <section id="#step-light">
         <div className="min-h-screen">
           <StepLightComponent />
         </div>
@@ -51,6 +52,11 @@ export default function Home() {
           <CallCenterComponent />
         </div>
       </section>
+      <section id="#footer">
+        <div className="">
+          <FooterComponent />
+        </div>
+      </section> */}
     </div>
   );
 }
