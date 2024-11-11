@@ -13,7 +13,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="flex flex-col">
-      <Navbar />
+      {/* <Navbar />
       <div className="lg:h-screen h-fit">
         <HeroComponent />
       </div>
@@ -22,17 +22,17 @@ export default function Home() {
           <IntroductionComponents />
         </div>
       </section>
-      {/* <section id="#step-light">
-        <div className="min-h-screen">
+      <section id="#step-light">
+        <div className="h-fit lg:min-h-screen">
           <StepLightComponent />
         </div>
-      </section>
+      </section> */}
       <section id="#value-point">
         <div className="h-fit">
           <ValuePointComponent />
         </div>
       </section>
-      <section id="#pricing">
+      {/* <section id="#pricing">
         <div className="h-fit">
           <PricingComponent />
         </div>
