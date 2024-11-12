@@ -26,18 +26,18 @@ export default function Home() {
         <div className="h-fit lg:min-h-screen">
           <StepLightComponent />
         </div>
-      </section> */}
+      </section>
       <section id="#value-point">
         <div className="h-fit">
           <ValuePointComponent />
         </div>
-      </section>
-      {/* <section id="#pricing">
+      </section> */}
+      <section id="#pricing">
         <div className="h-fit">
           <PricingComponent />
         </div>
       </section>
-      <section id="#review">
+      {/* <section id="#review">
         <div className="h-screen">
           <ReviewComponent />
         </div>

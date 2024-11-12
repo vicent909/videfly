@@ -11,7 +11,7 @@ export default function PricingListDark({content, color1, color2}: {content: str
           </div>
         </div>
       </div>
-      <p className={`text-${color1} text-[14px]  `}>{content}</p>
+      <p className={`text-${color1} text-[12px] lg:text-[14px]  `}>{content}</p>
     </div>
   );
 }
