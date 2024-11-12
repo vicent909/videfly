@@ -124,7 +124,7 @@ export default function ValuePointComponent() {
           </p>
         </div>
       </motion.div>
-      <div className="absolute lg:bottom-0 h-1/2" ref={ref1}></div>
+      <div className="absolute bottom-[80%] lg:bottom-0 h-1/2" ref={ref1}></div>
     </div>
   );
 }

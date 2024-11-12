@@ -13,7 +13,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="flex flex-col">
-      {/* <Navbar />
+      <Navbar />
       <div className="lg:h-screen h-fit">
         <HeroComponent />
       </div>
@@ -41,13 +41,13 @@ export default function Home() {
         <div className="h-screen">
           <ReviewComponent />
         </div>
-      </section> */}
+      </section>
       <section id="#faq">
         <div className="">
           <FAQComponent />
         </div>
       </section>
-      {/* <section id="#call-center">
+      <section id="#call-center">
         <div className="">
           <CallCenterComponent />
         </div>
@@ -56,7 +56,7 @@ export default function Home() {
         <div className="">
           <FooterComponent />
         </div>
-      </section> */}
+      </section>
     </div>
   );
 }

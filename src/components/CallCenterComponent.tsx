@@ -25,20 +25,20 @@ export default function CallCenterComponent() {
             ease: 'easeInOut',
             delay: 0.2
         }}
-    className="w-5/6 mx-auto py-[95px] ">
-      <div className="bg-gradient-to-br from-[#7f52ff] to-[#FB8570] px-[68px] py-[70px] rounded-[100px] flex items-center">
-        <div className="w-1/2">
-          <p className="font-nunito text-white text-[64px] font-bold ">
+    className="w-11/12 lg:w-5/6 mx-auto py-[50px] lg:py-[95px] ">
+      <div className="bg-gradient-to-br from-[#7f52ff] to-[#FB8570] px-[21.5px] lg:px-[68px] py-[50px] lg:py-[70px] rounded-[40px] lg:rounded-[100px] flex flex-col-reverse lg:flex-row items-center">
+        <div className="lg:w-1/2 flex flex-col lg:flex-col items-center lg:items-start">
+          <p className="font-nunito text-white text-[30px] lg:text-[64px] font-bold text-center lg:text-start ">
             Punya Pertanyaan? <br />
             Kami Siap Membantu
           </p>
           <LinkProduk title="Selama 24 jam" />
-          <p className="font-light text-[20px] text-white mt-[15px]">
+          <p className="font-light text-[12px] lg:text-[20px] text-center lg:text-start text-white mt-[15px]">
             Hubungi kami kapan saja, tim kami selalu siap sedia untuk membantu
             Anda dengan cepat dan ramah.
           </p>
           <motion.div 
-            className="bg-white rounded-xl w-fit py-[10px] px-[24px] flex gap-[11.5px] mt-[30px] cursor-pointer"
+            className="bg-white rounded-xl w-fit py-[8px] lg:py-[10px] px-[13.5px] lg:px-[24px] flex gap-[11.5px] mt-[30px] cursor-pointer items-center"
             whileHover={{
                 scale: 1.1
             }}
@@ -49,7 +49,7 @@ export default function CallCenterComponent() {
                 scale: 1
             }}
           >
-            <p className="font-light text-[20px] bg-gradient-to-br from-[#7f52ff] to-[#FB8570] bg-clip-text text-transparent ">
+            <p className="font-bold text-[12px] lg:text-[20px] bg-gradient-to-br from-[#7f52ff] to-[#FB8570] bg-clip-text text-transparent ">
               Coba Gratis
             </p>
             <div className="bg-gradient-to-br from-[#7f52ff] to-[#FB8570] w-fit h-fit rounded-full p-[4px]">
@@ -57,7 +57,7 @@ export default function CallCenterComponent() {
             </div>
           </motion.div>
         </div>
-        <div className="w-1/2">
+        <div className="lg:w-1/2">
           <Image alt="img" src={Mockup} />
         </div>
       </div>
