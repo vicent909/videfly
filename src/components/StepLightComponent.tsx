@@ -28,7 +28,7 @@ export default function StepLightComponent() {
   const isInView = useInView(ref, { once: true, amount: 0.5 });
 
   return (
-    <div className="lg:h-screen h-fit flex justify-center relative overflow-x-hidden">
+    <div className="lg:h-screen h-fit flex justify-center relative overflow-hidden">
       <motion.div
         initial={{
           opacity: 0,
