@@ -72,7 +72,7 @@ export default function ReviewComponent() {
   const ondragend = () => {
     setDragging(false);
     const x = dragx.get();
-    console.log(x);
+    
     if (x <= -10 && selected < data.length - 1) {
       setSelected((pv) => pv + 1);
     } else if (x >= 10 && selected > 0) {

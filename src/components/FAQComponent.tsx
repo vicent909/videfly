@@ -23,9 +23,9 @@ export default function FAQComponent() {
         <Accordion
           variant="splitted"
           itemClasses={{
-            title: "font-semibold text-[12px] lg:text-[18px]",
+            title: "font-semibold text-[12px] lg:text-[18px] text-neutral-200",
             trigger: "px-0 p-[12px] lg:p-[22px] ",
-            base: "p-0 shadow-navbar",
+            base: "p-0 shadow-navbar bg-neutral-100",
             content: 'px-[12px] pb-[12px] lg:px-[22px] lg:pb-[22px] text-[12px] lg:text-[18px]'
           }}
           className="gap-[25px] lg:gap-[40px]"
@@ -34,7 +34,7 @@ export default function FAQComponent() {
             key="1"
             aria-label="Accordion 1"
             title="Apa itu Videfly?"
-            indicator={<ChevronDown />}
+            indicator={<ChevronDown color="#B0B0B0" />}
           >
             <p>
               Videfly adalah AI video content generator yang memudahkan bisnismu
@@ -56,7 +56,7 @@ export default function FAQComponent() {
             key="2"
             aria-label="Accordion 2"
             title="Berapa biaya Videfly?"
-            indicator={<ChevronDown />}
+            indicator={<ChevronDown color="#B0B0B0" />}
           >
             <p>
               Videfly menawarkan tiga paket yang disesuaikan dengan kebutuhan
@@ -81,7 +81,7 @@ export default function FAQComponent() {
             key="3"
             aria-label="Accordion 3"
             title="Bagaimana cara menggunakan Videfly?"
-            indicator={<ChevronDown />}
+            indicator={<ChevronDown color="#B0B0B0" />}
           >
             <p>
               Menggunakan Videfly sangat mudah! Cukup ikuti langkah berikut:
@@ -104,7 +104,7 @@ export default function FAQComponent() {
             key="4"
             aria-label="Accordion 4"
             title="Bisakah Videfly membuat video produk untuk brand saya?"
-            indicator={<ChevronDown />}
+            indicator={<ChevronDown color="#B0B0B0" />}
           >
             <p>
               Tentu saja! Videfly dirancang khusus untuk membantu bisnismu
@@ -120,7 +120,7 @@ export default function FAQComponent() {
             key="5"
             aria-label="Accordion 5"
             title="Bisakah Videfly membuat video produk untuk brand saya?"
-            indicator={<ChevronDown />}
+            indicator={<ChevronDown color="#B0B0B0" />}
           >
             <p>
               Videfly menawarkan dua kategori fitur utama:
