@@ -5,30 +5,30 @@ import React from "react";
 
 export default function FAQComponent() {
   return (
-    <div className="w-5/6 mx-auto flex py-[88px] gap-[45px]">
-      <div className="w-1/2">
+    <div className="w-11/12 lg:w-5/6 mx-auto flex flex-col lg:flex-row py-[40px] lg:py-[88px] gap-[45px]">
+      <div className=" lg:w-1/2 flex flex-col items-center lg:items-start">
         <div className="flex items-center border-[1px] px-[11px] py-[2px] gap-[7px] rounded-full border-primary-violet-500 cursor-pointer w-fit">
           <Diamond color="#703be7" width={13} height={13} />
-          <p className="text-primary-violet-500 text-[16px]">FAQ</p>
+          <p className="text-primary-violet-500 text-[12px] lg:text-[16px]">FAQ</p>
         </div>
-        <p className="font-nunito font-bold text-[48px]">
+        <p className="font-nunito font-extrabold text-[30px] lg:text-[48px] text-center lg:text-start">
           Pertanyaan Seputar Videfly
         </p>
-        <p className="font-light text-[18px]">
+        <p className="font-light text-[12px] lg:text-[18px] text-center lg:text-starttext-center lg:text-start pt-[15px]">
           Videfly punya berbagai pilihan paket harga yang sesuai dengan
           kebutuhan budget kamu
         </p>
       </div>
-      <div className="w-1/2">
+      <div className="lg:w-1/2">
         <Accordion
           variant="splitted"
           itemClasses={{
-            title: "font-semibold text-[18px]",
-            trigger: "px-0 p-[22px] ",
+            title: "font-semibold text-[12px] lg:text-[18px]",
+            trigger: "px-0 p-[12px] lg:p-[22px] ",
             base: "p-0 shadow-navbar",
-            content: 'px-[22px] pb-[22px]'
+            content: 'px-[12px] pb-[12px] lg:px-[22px] lg:pb-[22px] text-[12px] lg:text-[18px]'
           }}
-          className="gap-[40px]"
+          className="gap-[25px] lg:gap-[40px]"
         >
           <AccordionItem
             key="1"

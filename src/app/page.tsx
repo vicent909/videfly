@@ -36,18 +36,18 @@ export default function Home() {
         <div className="h-fit">
           <PricingComponent />
         </div>
-      </section> */}
+      </section>
       <section id="#review">
         <div className="h-screen">
           <ReviewComponent />
         </div>
-      </section>
-      {/* <section id="#faq">
+      </section> */}
+      <section id="#faq">
         <div className="">
           <FAQComponent />
         </div>
       </section>
-      <section id="#call-center">
+      {/* <section id="#call-center">
         <div className="">
           <CallCenterComponent />
         </div>
