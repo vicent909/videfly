@@ -2,7 +2,7 @@
 import { CobaGratis } from "@/assets";
 import { PencilStar, UserStar, VideoLogo } from "@/assets/SVG";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import LinkProduk from "./LinkProduk";
 import useMeasure from "react-use-measure";
 import { animate, useMotionValue, motion } from "framer-motion";
@@ -15,6 +15,7 @@ export default function HeroComponent() {
     "./video5.mp4",
     "./video6.mp4",
   ];
+  const refVideo = useRef<(HTMLVideoElement | null)[]>([]);
   const [ref, { height }] = useMeasure();
   const [refHorizontal, { width }] = useMeasure();
   const [screen, { width: screenWidth }] = useMeasure();
@@ -68,6 +69,18 @@ export default function HeroComponent() {
 
     return controls.stop;
   }, [yTranslation2, height]);
+
+  useEffect(() => {
+    refVideo.current.forEach((e, i) => {
+      if(e){
+        if( i === imgIdx){
+          e.play();
+        }else{
+          e.pause()
+        }
+      }
+    });
+  }, [imgIdx])
   
   return (
     <div className="w-11/12 2xl:w-5/6 mx-auto h-full flex flex-col items-center pt-[105px] pb-[30px] lg:pt-0 lg:pb-0 lg:flex-row overflow-hidden relative">
@@ -75,7 +88,7 @@ export default function HeroComponent() {
         className="w-full text-center lg:w-1/2 lg:text-start h-fit lg:h-full lg:py-[54px] flex flex-col lg:justify-between lg:items-start"
       >
         <div />
-        <div className="flex flex-col items-center lg:items-start" ref={screen}>
+        <div className="flex flex-col items-center lg:items-start">
           <div className="flex items-center justify-center lg:justify-start gap-4">
             <p className="font-nunito font-extrabold text-[30px] md:text-[40px] lg:text-[64px]">
               Sulap
@@ -199,7 +212,7 @@ export default function HeroComponent() {
       {/* end toggle desktop */}
 
       {/* video section mobile */}
-      <div className="lg:hidden mt-[35px] h-fit">
+      <div className="lg:hidden mt-[35px] h-fit"  ref={screen}>
         <motion.div
           className="h-fit flex gap-[25px]"
           drag="x"
@@ -210,7 +223,7 @@ export default function HeroComponent() {
           onDragEnd={onDragEnd}
           style={{ x: dragX }}
           animate={{
-            translateX: `-${imgIdx * (width + 25)}px`,
+            translateX: `-${(width + 25) * imgIdx}px`,
           }}
         >
           <div className={`shrink-0`} style={{minWidth: `${num + "px"}`}} ></div>
@@ -219,6 +232,8 @@ export default function HeroComponent() {
               <motion.div
                 key={i}
                 className="h-fit w-1/3 shrink-0"
+                ref={refHorizontal}
+
               >
                 <motion.video
                   initial={{
@@ -227,9 +242,12 @@ export default function HeroComponent() {
                   animate={{
                     scale: i === imgIdx ? 1.1 : 0.9,
                   }}
-                  ref={refHorizontal}
+                  ref={(el) => {
+                    refVideo.current[i] = el
+                  }}
                   src={e}
-                  autoPlay
+                  // autoPlay
+                  playsInline
                   loop
                   muted
                   className="rounded-xl"
@@ -374,6 +392,7 @@ export default function HeroComponent() {
             />
             <video
               src={"./video2.mp4"}
+              playsInline
               autoPlay
               loop
               muted
@@ -381,6 +400,7 @@ export default function HeroComponent() {
             />
             <video
               src={"./video3.mp4"}
+              playsInline
               autoPlay
               loop
               muted
@@ -393,6 +413,7 @@ export default function HeroComponent() {
           >
             <video
               src={"./video5.mp4"}
+              playsInline
               autoPlay
               loop
               muted
@@ -404,6 +425,7 @@ export default function HeroComponent() {
             />
             <video
               src={"./video4.mp4"}
+              playsInline
               autoPlay
               loop
               muted
@@ -416,6 +438,7 @@ export default function HeroComponent() {
         <div className="hidden w-1/2 h-screen lg:flex z-10 flex-wrap items-center justify-center pt-[85px] pb-[10px] ">
           <video
             src={`./${selected}.mp4`}
+            playsInline
             autoPlay
             loop
             muted

@@ -43,7 +43,7 @@ export default function StepLightComponent() {
           delay: 3.4,
           type: "spring",
         }}
-        className="h-full absolute flex lg:items-end items-center justify-center w-full"
+        className="h-full absolute flex lg:items-end items-center justify-center w-[90%] lg:w-[70%]"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -104,6 +104,7 @@ export default function StepLightComponent() {
                 clipPath: "url(#videoClipPath)", // Apply the custom path as a clip to the video
               }}
               autoPlay
+              playsInline
               loop
               muted
               src="./step.mp4" // Replace with the path or URL of your video
@@ -172,7 +173,7 @@ export default function StepLightComponent() {
           <Image
             alt="step"
             src={StepPng}
-            className="h-fit px-[38px] mt-[50px] lg:px-0 lg:mt-0"
+            className="h-fit px-[38px] pt-[50px] lg:px-0 lg:mt-0"
           />
         </motion.div>
       </div>

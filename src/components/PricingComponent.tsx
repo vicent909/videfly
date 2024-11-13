@@ -11,7 +11,7 @@ export default function PricingComponent() {
   const [slilderValue, setSliderValue] = useState<SliderValue>(0);
   const price = ["129.000", "299.000", "529.000"];
   return (
-    <div className="h-fit flex items-center justify-center w-11/12 lg:w-5/6 mx-auto py-[40px] lg:py-[60px]">
+    <div className="h-fit flex items-center justify-center w-11/12 mx-auto py-[40px] lg:py-[60px]">
       <div className="flex flex-col gap-[25px] lg:gap-[50px] h-full w-full">
         <motion.div
           className=" flex flex-col items-center"

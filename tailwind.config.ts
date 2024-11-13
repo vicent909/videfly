@@ -61,6 +61,22 @@ const config: Config = {
       boxShadow: {
         'navbar': '0px 6px 45px -4px rgba(112, 59, 231, 0.1)',
         'button': '0px 0px 0px 1px #5654D4',
+      },
+      screens: {
+        'sm': '640px',
+        // => @media (min-width: 640px) { ... }
+  
+        'md': '768px',
+        // => @media (min-width: 768px) { ... }
+  
+        'lg': '1024px',
+        // => @media (min-width: 1024px) { ... }
+  
+        'xl': '1280px',
+        // => @media (min-width: 1280px) { ... }
+  
+        '2xl': '1536px',
+        // => @media (min-width: 1536px) { ... }
       }
     },
   },
