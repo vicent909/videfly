@@ -26,16 +26,16 @@ export default function ReviewCard({
       }`}
     >
       <div>
-        <p className="font-nunito font-bold text-[21px] lg:text-[48px] ">“</p>
-        <p className="text-[11.25px] lg:text-[25px] pl-[25px]  ">{text}</p>
+        <p className="font-nunito font-bold text-[21px] md:text-[30px] lg:text-[48px] ">“</p>
+        <p className="text-[11.25px] md:text-[16px] lg:text-[25px] pl-[25px]  ">{text}</p>
       </div>
       <div className="flex gap-[30px] items-center">
         <Image alt="picture" src={picture} className="hidden lg:inline"/>
         <Image alt="picture" src={picture} className="lg:hidden h-[85px] w-[78px]"/>
         <div className="flex flex-col gap-[13px] lg:gap-[30px]">
           <div>
-            <p className="font-semibold text-[14px] lg:text-[32px]  ">{name}</p>
-            <p className="font-light text-[10px] lg:text-[20px] ">{title}</p>
+            <p className="font-semibold text-[14px] md:text-[20px] lg:text-[32px]  ">{name}</p>
+            <p className="font-light text-[10px] md:text-[12px] lg:text-[20px] ">{title}</p>
           </div>
           {logo !== null && <Image alt="logo" src={logo} className="hidden lg:inline"/>}
           {logo !== null && <Image alt="logo" src={logo} className="lg:hidden h-[50%] w-[50%]"/>}

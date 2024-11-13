@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Checklist2, ChecklistLainnya, Diamond } from "@/assets/SVG";
+import { Diamond } from "@/assets/SVG";
 import { Slider, SliderValue, Switch } from "@nextui-org/react";
 import PricingList from "./PricingList";
 import PricingListDark from "./PricingListDark";
@@ -37,7 +37,7 @@ export default function PricingComponent() {
                 wrapper: "group-data-[selected=true]:bg-primary-violet-500",
               }}
             />
-            <p className="text-neutral-200 font-semibold text-[12px] lg:text-[24px]  ">
+            <p className={`text-neutral-200 font-semibold text-[12px] lg:text-[24px] ${selected ? 'text-neutral-400' : 'text-neutral-200'} `}>
               Berlangganan Tahunan Hemat 20%
             </p>
           </div>
@@ -99,27 +99,22 @@ export default function PricingComponent() {
                 <div className="flex flex-col gap-[12px] lg:gap-[15px]">
                   <PricingListDark
                     color1="#545454"
-                    color2="bg-neutral-200"
                     content="5 credits/month (~5 video)"
                   />
                   <PricingListDark
                     color1="#545454"
-                    color2="bg-neutral-200"
                     content="Up to 3 video scenes"
                   />
                   <PricingListDark
                     color1="#545454"
-                    color2="bg-neutral-200"
                     content="100+ templates"
                   />
                   <PricingListDark
                     color1="#545454"
-                    color2="bg-neutral-200"
                     content="9:16 aspect ratio only"
                   />
                   <PricingListDark
                     color1="#545454"
-                    color2="bg-neutral-200"
                     content="Exports with watermark"
                   />
                 </div>

@@ -2,26 +2,23 @@
 import { StepPng } from "@/assets";
 import {
   Ai,
-  AIMagic,
   Blur,
   BrandKit,
-  Checklist,
   ColorIcon,
   Diamond,
-  Double,
   Elements,
-  ForwardIcon,
   RemoveBg,
-  Scissor,
   Templates,
 } from "@/assets/SVG";
 import Image from "next/image";
 import React, { useRef } from "react";
-import { delay, motion, useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import StepComponent1 from "./StepComponent1";
 import StepComponent2 from "./StepComponent2";
 import StepComponent1Mobile from "./StepComponent1Mobile";
 import StepComponent2Mobile from "./StepComponentMobile";
+import StepComponent1Tablet from "./StepComponent1Tablet";
+import StepComponent2Tablet from "./StepComponent2Tablet";
 
 export default function StepLightComponent() {
   const ref = useRef(null);
@@ -180,9 +177,11 @@ export default function StepLightComponent() {
         </motion.div>
       </div>
       <StepComponent1 isInView={isInView} />
+      <StepComponent1Tablet isInView={isInView} />
       <StepComponent1Mobile isInView={isInView} />
       <StepComponent2 isInView={isInView} />
       <StepComponent2Mobile isInView={isInView} />
+      <StepComponent2Tablet isInView={isInView} />
 
       {/* desktop */}
       <motion.div
@@ -286,7 +285,7 @@ export default function StepLightComponent() {
           type: "spring",
           opacity: { delay: 3 },
         }}
-        className="absolute bg-white z-30 bottom-[20%] right-[10%] p-[2px] w-[19px] rounded-sm shadow-navbar flex flex-col gap-[2px] lg:hidden"
+        className="absolute bg-white z-30 bottom-[20%] right-[10%] p-[2px] w-[19px] rounded-sm shadow-navbar flex flex-col gap-[2px] md:hidden"
       >
         <div className="flex py-[2.5px] px-[2.5px] items-center flex-col justify-center bg-[#f5f5f5] rounded-[3px]">
           <Templates width={5.8} height={5.8} color="#703be7"  />
@@ -321,7 +320,7 @@ export default function StepLightComponent() {
           type: "spring",
           opacity: { delay: 3 },
         }}
-        className="absolute bg-white z-30 bottom-[25%] left-[10%] p-[2px] w-[19px] rounded-sm shadow-navbar flex flex-col gap-[2px] lg:hidden"
+        className="absolute bg-white z-30 bottom-[25%] left-[10%] p-[2px] w-[19px] rounded-sm shadow-navbar flex flex-col gap-[2px] md:hidden"
       >
         <div className="flex py-[2.5px] items-center flex-col justify-center bg-[#f5f5f5] rounded-[3px]">
           <Ai width={5.8} height={5.8} color="#703be7" />
@@ -343,6 +342,85 @@ export default function StepLightComponent() {
         </div>
       </motion.div>
       {/* end of mobile */}
+
+      {/* tablet */}
+      <motion.div
+        initial={{
+          x: 1000,
+          opacity: 1,
+        }}
+        animate={
+          isInView
+            ? {
+                x: 0,
+                opacity: 0,
+              }
+            : {}
+        }
+        transition={{
+          duration: 1,
+          ease: "easeInOut",
+          delay: 0.8,
+          type: "spring",
+          opacity: { delay: 3 },
+        }}
+        className="absolute bg-white z-30 bottom-[30%] right-[5%] p-[6px] w-[51px] rounded-sm shadow-navbar md:flex flex-col gap-[5px] hidden lg:hidden"
+      >
+        <div className="flex py-[7px] items-center flex-col justify-center bg-[#f5f5f5] rounded-[3px]">
+          <Templates width={15} height={15} color="#703be7"  />
+          <p className="text-primary-violet-500 text-[7px] truncate">Templates</p>
+        </div>
+        <div className="flex py-[7px] items-center flex-col justify-center bg-[#f5f5f5] rounded-[3px]">
+          <Elements width={15} height={15} color="#703be7" />
+          <p className="text-primary-violet-500 text-[7px] truncate">Elements</p>
+        </div>
+        <div className="flex py-[7px] items-center flex-col justify-center bg-[#f5f5f5] rounded-[3px]">
+          <BrandKit width={15} height={15} color="#703be7" />
+          <p className="text-primary-violet-500 text-[7px] truncate">Brand Kits</p>
+        </div>
+      </motion.div>
+      <motion.div
+        initial={{
+          x: -1000,
+          opacity: 1,
+        }}
+        animate={
+          isInView
+            ? {
+                x: 0,
+                opacity: 0,
+              }
+            : {}
+        }
+        transition={{
+          duration: 1,
+          ease: "easeInOut",
+          delay: 0.8,
+          type: "spring",
+          opacity: { delay: 3 },
+        }}
+        className="absolute bg-white z-30 bottom-[40%] left-[5%] p-[6px] w-[51px] rounded-sm shadow-navbar md:flex flex-col gap-[5px] hidden lg:hidden"
+      >
+        <div className="flex py-[7px] items-center flex-col justify-center bg-[#f5f5f5] rounded-[3px]">
+          <Ai width={15} height={15} color="#703be7" />
+          <p className="text-primary-violet-500 text-[7px]">Ask AI</p>
+        </div>
+        <div className="flex py-[7px] items-center flex-col justify-center bg-[#f5f5f5] rounded-[3px]">
+          <RemoveBg width={15} height={15} color="#703be7" />
+          <p className="text-primary-violet-500 text-[7px] w-[35px] truncate">
+            Remove Background
+          </p>
+        </div>
+        <div className="flex py-[7px] items-center flex-col justify-center bg-[#f5f5f5] rounded-[3px]">
+          <Blur width={15} height={15} color="#703be7" />
+          <p className="text-primary-violet-500 text-[7px]">Blur</p>
+        </div>
+        <div className="flex py-[7px] items-center flex-col justify-center bg-[#f5f5f5] rounded-[3px]">
+          <ColorIcon width={15} height={15} color="#703be7" />
+          <p className="text-primary-violet-500 text-[7px]">Color</p>
+        </div>
+      </motion.div>
+      {/* end of tablet */}
       <div className="absolute bg-red-50 top-[70%]" ref={ref}></div>
     </div>
   );

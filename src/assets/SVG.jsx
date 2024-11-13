@@ -210,7 +210,7 @@ const Checklist = ({ width = 25, height = 24, color = "#000000" }) => {
   );
 };
 
-const AIMagic = ({ width = 7, height = 8, color = "#000000" }) => {
+const AIMagic = ({ width = 7, height = 8 }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -255,7 +255,7 @@ const AIMagic = ({ width = 7, height = 8, color = "#000000" }) => {
   );
 
 };
-const AIMagicMobile = ({ width = 1.8, height = 1.8, color = "#000000" }) => {
+const AIMagicMobile = ({ width = 1.8, height = 1.8 }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -654,7 +654,7 @@ const Camera10 = ({ width = 24, height = 24, color = "#8a8a8a" }) => {
   );
 };
 
-const Checklist2 = ({ width = 24, height = 24, color = "#8a8a8a" }) => {
+const Checklist2 = ({ color = "#8a8a8a" }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -684,7 +684,7 @@ const Checklist2 = ({ width = 24, height = 24, color = "#8a8a8a" }) => {
   );
 };
 
-const ChecklistLainnya = ({ width = 24, height = 24, color = "#000000" }) => {
+const ChecklistLainnya = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -759,7 +759,7 @@ const ChevronDown = ({ width = 24, height = 24, color = "#000000" }) => {
   );
 };
 
-const NavbarBurger = ({ width = 24, height = 24, color = "#000000" }) => {
+const NavbarBurger = ({ width = 24, height = 24}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

@@ -1,5 +1,5 @@
 import { Checklist2 } from "@/assets/SVG";
-import React, { useEffect } from "react";
+import React from "react";
 
 export default function PricingList({content, color1, color2}: {content: string, color1: string, color2: string}) {
   return (

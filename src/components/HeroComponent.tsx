@@ -1,5 +1,5 @@
 "use client";
-import { CobaGratis, Video } from "@/assets";
+import { CobaGratis } from "@/assets";
 import { PencilStar, UserStar, VideoLogo } from "@/assets/SVG";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
@@ -22,17 +22,12 @@ export default function HeroComponent() {
   const [isHover, setIsHover] = useState("");
   const [selected, setSelected] = useState("");
   const [imgIdx, setImgIdx] = useState(1);
-  const [dragging, setDragging] = useState(false);
 
-  let halfscreen = screenWidth /2;
-  let halfcontent = width /2;
-  let num = halfscreen - halfcontent - 27;
+  const halfscreen = screenWidth /2;
+  const halfcontent = width /2;
+  const num = halfscreen - halfcontent - 27;
 
-  const onDragStart = () => {
-    setDragging(true);
-  };
   const onDragEnd = () => {
-    setDragging(false);
     const x = dragX.get();
 
     if (x <= -50 && imgIdx < videoHrz.length - 1) {
@@ -47,10 +42,9 @@ export default function HeroComponent() {
   const yTranslation2 = useMotionValue(0);
 
   useEffect(() => {
-    let controls;
-    let finalPosition = -height - 30;
+    const finalPosition = -height - 30;
 
-    controls = animate(yTranslation, [finalPosition, 0], {
+    const controls = animate(yTranslation, [finalPosition, 0], {
       ease: "linear",
       duration: 20,
       repeat: Infinity,
@@ -62,10 +56,9 @@ export default function HeroComponent() {
   }, [yTranslation, height]);
 
   useEffect(() => {
-    let controls;
-    let finalPosition = -height - 30;
+    const finalPosition = -height - 30;
 
-    controls = animate(yTranslation2, [0, finalPosition], {
+    const controls = animate(yTranslation2, [0, finalPosition], {
       ease: "linear",
       duration: 20,
       repeat: Infinity,
@@ -75,21 +68,21 @@ export default function HeroComponent() {
 
     return controls.stop;
   }, [yTranslation2, height]);
-
+  
   return (
-    <div className="w-11/12 2xl:w-5/6 mx-auto h-full flex flex-col items-center pt-[75px] pb-[30px] lg:pt-0 lg:pb-0 lg:flex-row overflow-hidden relative">
+    <div className="w-11/12 2xl:w-5/6 mx-auto h-full flex flex-col items-center pt-[105px] pb-[30px] lg:pt-0 lg:pb-0 lg:flex-row overflow-hidden relative">
       <div
         className="w-full text-center lg:w-1/2 lg:text-start h-fit lg:h-full lg:py-[54px] flex flex-col lg:justify-between lg:items-start"
       >
         <div />
         <div className="flex flex-col items-center lg:items-start" ref={screen}>
           <div className="flex items-center justify-center lg:justify-start gap-4">
-            <p className="font-nunito font-extrabold text-[30px] lg:text-[64px]">
+            <p className="font-nunito font-extrabold text-[30px] md:text-[40px] lg:text-[64px]">
               Sulap
             </p>
             <LinkProduk title="Link Produk" />
           </div>
-          <p className="font-nunito font-extrabold text-[30px] lg:text-[64px] ">
+          <p className="font-nunito font-extrabold text-[30px] md:text-[40px] lg:text-[64px] ">
             Jadi Video dalam <br />
             Sekejap!
           </p>
@@ -98,7 +91,7 @@ export default function HeroComponent() {
             <br className="hidden lg:inline" /> Tinggal klik, bagikan dan jadi
             viral!
           </p>
-          <div className="mt-[30px] bg-gradient-to-br from-[#7f52ff] to-[#FB8570] w-fit text-white py-[13px] lg:py-[10px] px-[8px] lg:px-[20px] rounded-xl text-[12px] lg:text-[20px] flex items-center gap-[15px] cursor-pointer ">
+          <div className="mt-[30px] bg-gradient-to-br from-[#7f52ff] to-[#FB8570] w-fit text-white py-[13px] lg:py-[10px] px-[8px] lg:px-[20px] rounded-xl text-[12px] md:text-[14px] lg:text-[20px] flex items-center gap-[15px] cursor-pointer ">
             <p>Coba Gratis</p>
             <Image src={CobaGratis} alt="coba-gratis" />
           </div>
@@ -208,17 +201,16 @@ export default function HeroComponent() {
       {/* video section mobile */}
       <div className="lg:hidden mt-[35px] h-fit">
         <motion.div
-          className="h-fit flex gap-[27px]"
+          className="h-fit flex gap-[25px]"
           drag="x"
           dragConstraints={{
             right: 0,
             left: 0,
           }}
-          onDragStart={onDragStart}
           onDragEnd={onDragEnd}
           style={{ x: dragX }}
           animate={{
-            translateX: `-${imgIdx * (width + 27)}px`,
+            translateX: `-${imgIdx * (width + 25)}px`,
           }}
         >
           <div className={`shrink-0`} style={{minWidth: `${num + "px"}`}} ></div>
@@ -226,14 +218,14 @@ export default function HeroComponent() {
             return (
               <motion.div
                 key={i}
-                className="h-fit w-1/3 shrink-0 bg-blue-50"
+                className="h-fit w-1/3 shrink-0"
               >
                 <motion.video
                   initial={{
                     scale: 1,
                   }}
                   animate={{
-                    scale: i === imgIdx ? 1.2 : 1,
+                    scale: i === imgIdx ? 1.1 : 0.9,
                   }}
                   ref={refHorizontal}
                   src={e}

@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import {
-  AIMagic,
   AIMagicMobile,
   Checklist,
   ForwardIcon,
@@ -34,7 +33,7 @@ export default function StepComponent1Mobile({
         type: "spring",
         opacity: { delay: 3 },
       }}
-      className="absolute bg-white z-30 bottom-[3%] left-[10%] py-[3px] px-[5px] rounded-sm shadow-navbar lg:hidden"
+      className="absolute bg-white z-30 bottom-[3%] left-[10%] py-[3px] px-[5px] rounded-sm shadow-navbar md:hidden"
     >
       <div>
         <p className="font-semibold text-[3px]  ">

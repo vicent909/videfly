@@ -24,10 +24,9 @@ export default function SlidingTemplates() {
   const xTranslation = useMotionValue(0);
 
   useEffect(() => {
-    let controls;
-    let finalPosition = -width - (15 * 15);
+    const finalPosition = -width - (15 * 15);
 
-    controls = animate(xTranslation, [0, finalPosition], {
+    const controls = animate(xTranslation, [0, finalPosition], {
       ease: "linear",
       duration: 60,
       repeat: Infinity,
@@ -44,102 +43,102 @@ export default function SlidingTemplates() {
       style={{ x: xTranslation }}
     >
       <div className="flex gap-[6px] lg:gap-[15px]">
-        <div className="h-[112px] lg:h-[372px] w-[63px] lg:w-[209px] rounded-xl overflow-hidden ">
+        <div className="h-[112px] md:h-[202px] lg:h-[372px] w-[63px] md:w-[113px] lg:w-[209px] rounded-xl overflow-hidden ">
           <Image unoptimized alt="image" src={Potrait4} />
         </div>
       </div>
       <div className="flex flex-col gap-[6px] lg:gap-[15px]">
-        <div className="h-[53px] lg:h-[178px] aspect-square rounded-xl overflow-hidden ">
+        <div className="h-[53px] md:h-[96px] lg:h-[178px] aspect-square rounded-xl overflow-hidden ">
           <Image unoptimized alt="image" src={Square1} />
         </div>
-        <div className="h-[53px] lg:h-[178px] aspect-square rounded-xl overflow-hidden ">
+        <div className="h-[53px] md:h-[96px] lg:h-[178px] aspect-square rounded-xl overflow-hidden ">
           <Image unoptimized alt="image" src={Square2} />
         </div>
       </div>
       <div className="flex flex-col gap-[6px] lg:gap-[15px]">
-        <div className="h-[53px] lg:h-[178px] w-[95px] lg:w-[316px] rounded-xl overflow-hidden ">
+        <div className="h-[53px] md:h-[96px] lg:h-[178px] w-[95px] md:w-[170px] lg:w-[316px] rounded-xl overflow-hidden ">
           <Image unoptimized alt="image" src={Rec1} className="-mt-[30%]" />
         </div>
-        <div className="h-[53px] lg:h-[178px] w-[95px] lg:w-[316px] rounded-xl overflow-hidden bg-cover bg-center">
+        <div className="h-[53px] md:h-[96px] lg:h-[178px] w-[95px] md:w-[170px] lg:w-[316px] rounded-xl overflow-hidden bg-cover bg-center">
           <Image unoptimized alt="image" src={Rec2} className="-mt-[10%]" />
         </div>
       </div>
       <div className="flex gap-[6px] lg:gap-[15px]">
-        <div className="h-[112px] lg:h-[372px] w-[63px] lg:w-[209px] rounded-xl overflow-hidden ">
+        <div className="h-[112px] md:h-[202px] lg:h-[372px] w-[63px] md:w-[113px] lg:w-[209px] rounded-xl overflow-hidden ">
           <Image unoptimized alt="image" src={Potrait1} />
         </div>
-        <div className="h-[112px] lg:h-[372px] w-[63px] lg:w-[209px] rounded-xl overflow-hidden bg-cover bg-center">
+        <div className="h-[112px] md:h-[202px] lg:h-[372px] w-[63px] md:w-[113px] lg:w-[209px] rounded-xl overflow-hidden bg-cover bg-center">
           <Image unoptimized alt="image" src={Potrait2} />
         </div>
       </div>
       <div className="flex flex-col gap-[6px] lg:gap-[15px]">
-        <div className="h-[53px] lg:h-[178px] aspect-square rounded-xl overflow-hidden ">
+        <div className="h-[53px] md:h-[96px] lg:h-[178px] aspect-square rounded-xl overflow-hidden ">
           <Image unoptimized alt="image" src={Square3} />
         </div>
-        <div className="h-[53px] lg:h-[178px] aspect-square rounded-xl overflow-hidden ">
+        <div className="h-[53px] md:h-[96px] lg:h-[178px] aspect-square rounded-xl overflow-hidden ">
           <Image unoptimized alt="image" src={Square4} />
         </div>
       </div>
       <div className="flex flex-col gap-[6px] lg:gap-[15px]">
-        <div className="h-[53px] lg:h-[178px] aspect-square rounded-xl overflow-hidden ">
+        <div className="h-[53px] md:h-[96px] lg:h-[178px] aspect-square rounded-xl overflow-hidden ">
           <Image unoptimized alt="image" src={Square5} />
         </div>
-        <div className="h-[53px] lg:h-[178px] aspect-square rounded-xl overflow-hidden ">
+        <div className="h-[53px] md:h-[96px] lg:h-[178px] aspect-square rounded-xl overflow-hidden ">
           <Image unoptimized alt="image" src={Square6} />
         </div>
       </div>
       <div className="flex gap-[6px] lg:gap-[15px]">
-        <div className="h-[112px] lg:h-[372px] w-[63px] lg:w-[209px] rounded-xl overflow-hidden ">
+        <div className="h-[112px] md:h-[202px] lg:h-[372px] w-[63px] md:w-[113px] lg:w-[209px] rounded-xl overflow-hidden ">
           <Image unoptimized alt="image" src={Potrait3} />
         </div>
       </div>
       <div className="flex gap-[6px] lg:gap-[15px]">
-        <div className="h-[112px] lg:h-[372px] w-[63px] lg:w-[209px] rounded-xl overflow-hidden ">
+        <div className="h-[112px] md:h-[202px] lg:h-[372px] w-[63px] md:w-[113px] lg:w-[209px] rounded-xl overflow-hidden ">
           <Image unoptimized alt="image" src={Potrait4} />
         </div>
       </div>
       <div className="flex flex-col gap-[6px] lg:gap-[15px]">
-        <div className="h-[53px] lg:h-[178px] aspect-square rounded-xl overflow-hidden ">
+        <div className="h-[53px] md:h-[96px] lg:h-[178px] aspect-square rounded-xl overflow-hidden ">
           <Image unoptimized alt="image" src={Square1} />
         </div>
-        <div className="h-[53px] lg:h-[178px] aspect-square rounded-xl overflow-hidden ">
+        <div className="h-[53px] md:h-[96px] lg:h-[178px] aspect-square rounded-xl overflow-hidden ">
           <Image unoptimized alt="image" src={Square2} />
         </div>
       </div>
       <div className="flex flex-col gap-[6px] lg:gap-[15px]">
-        <div className="h-[53px] lg:h-[178px] w-[95px] lg:w-[316px] rounded-xl overflow-hidden ">
+        <div className="h-[53px] md:h-[96px] lg:h-[178px] w-[95px] md:w-[170px] lg:w-[316px] rounded-xl overflow-hidden ">
           <Image unoptimized alt="image" src={Rec1} className="-mt-[30%]" />
         </div>
-        <div className="h-[53px] lg:h-[178px] w-[95px] lg:w-[316px] rounded-xl overflow-hidden bg-cover bg-center">
+        <div className="h-[53px] md:h-[96px] lg:h-[178px] w-[95px] md:w-[170px] lg:w-[316px] rounded-xl overflow-hidden bg-cover bg-center">
           <Image unoptimized alt="image" src={Rec2} className="-mt-[10%]" />
         </div>
       </div>
       <div className="flex gap-[6px] lg:gap-[15px]">
-        <div className="h-[112px] lg:h-[372px] w-[63px] lg:w-[209px] rounded-xl overflow-hidden ">
+        <div className="h-[112px] md:h-[202px] lg:h-[372px] w-[63px] md:w-[113px] lg:w-[209px] rounded-xl overflow-hidden ">
           <Image unoptimized alt="image" src={Potrait1} />
         </div>
-        <div className="h-[112px] lg:h-[372px] w-[63px] lg:w-[209px] rounded-xl overflow-hidden bg-cover bg-center">
+        <div className="h-[112px] md:h-[202px] lg:h-[372px] w-[63px] md:w-[113px] lg:w-[209px] rounded-xl overflow-hidden bg-cover bg-center">
           <Image unoptimized alt="image" src={Potrait2} />
         </div>
       </div>
       <div className="flex flex-col gap-[6px] lg:gap-[15px]">
-        <div className="h-[53px] lg:h-[178px] aspect-square rounded-xl overflow-hidden ">
+        <div className="h-[53px] md:h-[96px] lg:h-[178px] aspect-square rounded-xl overflow-hidden ">
           <Image unoptimized alt="image" src={Square3} />
         </div>
-        <div className="h-[53px] lg:h-[178px] aspect-square rounded-xl overflow-hidden ">
+        <div className="h-[53px] md:h-[96px] lg:h-[178px] aspect-square rounded-xl overflow-hidden ">
           <Image unoptimized alt="image" src={Square4} />
         </div>
       </div>
       <div className="flex flex-col gap-[6px] lg:gap-[15px]">
-        <div className="h-[53px] lg:h-[178px] aspect-square rounded-xl overflow-hidden ">
+        <div className="h-[53px] md:h-[96px] lg:h-[178px] aspect-square rounded-xl overflow-hidden ">
           <Image unoptimized alt="image" src={Square5} />
         </div>
-        <div className="h-[53px] lg:h-[178px] aspect-square rounded-xl overflow-hidden ">
+        <div className="h-[53px] md:h-[96px] lg:h-[178px] aspect-square rounded-xl overflow-hidden ">
           <Image unoptimized alt="image" src={Square6} />
         </div>
       </div>
       <div className="flex gap-[6px] lg:gap-[15px]">
-        <div className="h-[112px] lg:h-[372px] w-[63px] lg:w-[209px] rounded-xl overflow-hidden ">
+        <div className="h-[112px] md:h-[202px] lg:h-[372px] w-[63px] md:w-[113px] lg:w-[209px] rounded-xl overflow-hidden ">
           <Image unoptimized alt="image" src={Potrait3} />
         </div>
       </div>

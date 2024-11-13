@@ -1,17 +1,5 @@
 "use client";
 import {
-  Potrait1,
-  Potrait2,
-  Potrait3,
-  Potrait4,
-  Rec1,
-  Rec2,
-  Square1,
-  Square2,
-  Square3,
-  Square4,
-  Square5,
-  Square6,
   ValuePoint1,
   ValuePoint2,
 } from "@/assets";

@@ -8,7 +8,6 @@ import PricingComponent from "@/components/PricingComponent";
 import ReviewComponent from "@/components/ReviewComponent";
 import StepLightComponent from "@/components/StepLightComponent";
 import ValuePointComponent from "@/components/ValuePointComponent";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -38,7 +37,7 @@ export default function Home() {
         </div>
       </section>
       <section id="#review">
-        <div className="h-screen">
+        <div className="h-fit lg:h-screen">
           <ReviewComponent />
         </div>
       </section>

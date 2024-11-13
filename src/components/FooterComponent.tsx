@@ -4,7 +4,7 @@ import React from "react";
 
 export default function FooterComponent() {
   return (
-    <div className={`w-full text-white p-2 md:p-4 bg-[#703BE7]`}>
+    <div className={`w-full text-white p-2 md:p-4 bg-black`}>
       <div className="flex flex-col md:flex-row justify-evenly gap-3 md:gap-1 py-8">
         <div className="md:hidden flex flex-col p-4">
           <Image

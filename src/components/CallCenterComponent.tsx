@@ -28,7 +28,7 @@ export default function CallCenterComponent() {
     className="w-11/12 lg:w-5/6 mx-auto py-[50px] lg:py-[95px] ">
       <div className="bg-gradient-to-br from-[#7f52ff] to-[#FB8570] px-[21.5px] lg:px-[68px] py-[50px] lg:py-[70px] rounded-[40px] lg:rounded-[100px] flex flex-col-reverse lg:flex-row items-center">
         <div className="lg:w-1/2 flex flex-col lg:flex-col items-center lg:items-start">
-          <p className="font-nunito text-white text-[30px] lg:text-[64px] font-bold text-center lg:text-start ">
+          <p className="font-nunito text-white text-[30px] md:text-[40px] lg:text-[64px] font-bold text-center lg:text-start ">
             Punya Pertanyaan? <br />
             Kami Siap Membantu
           </p>

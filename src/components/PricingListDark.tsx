@@ -1,7 +1,7 @@
-import { Checklist2, ChecklistLainnya } from "@/assets/SVG";
-import React, { useEffect } from "react";
+import { ChecklistLainnya } from "@/assets/SVG";
+import React from "react";
 
-export default function PricingListDark({content, color1, color2}: {content: string, color1: string, color2: string}) {
+export default function PricingListDark({content, color1}: {content: string, color1: string}) {
   return (
     <div className="flex gap-[16px] items-center ">
       <div className={`h-[26px] aspect-square rounded-full bg-[${color1}] bg-opacity-50 flex items-center justify-center`}>

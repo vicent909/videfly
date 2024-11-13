@@ -1,9 +1,11 @@
 "use client";
 import { ChevronDown, Diamond } from "@/assets/SVG";
 import { Accordion, AccordionItem } from "@nextui-org/react";
-import React from "react";
+import React, { useState } from "react";
 
 export default function FAQComponent() {
+  const [exp, setExp] = useState(0)
+  
   return (
     <div className="w-11/12 lg:w-5/6 mx-auto flex flex-col lg:flex-row py-[40px] lg:py-[88px] gap-[45px]">
       <div className=" lg:w-1/2 flex flex-col items-center lg:items-start">
@@ -23,18 +25,22 @@ export default function FAQComponent() {
         <Accordion
           variant="splitted"
           itemClasses={{
-            title: "font-semibold text-[12px] lg:text-[18px] text-neutral-200",
-            trigger: "px-0 p-[12px] lg:p-[22px] ",
-            base: "p-0 shadow-navbar bg-neutral-100",
-            content: 'px-[12px] pb-[12px] lg:px-[22px] lg:pb-[22px] text-[12px] lg:text-[18px]'
+            title: "font-semibold text-[12px] lg:text-[18px] text-neutral-200 hover:text-black aria-expanded:bg-red-50 p-[12px] lg:p-[22px] pr-0 ",
+            trigger: "px-0 p-[0px] lg:p-[0px]",
+            base: "p-0 shadow-navbar bg-neutral-100 hover:bg-white",
+            content: 'px-[12px] pb-[12px] lg:px-[22px] lg:pb-[22px] text-[12px] lg:text-[18px]',
+            indicator: "mr-[12px] lg:mr-[22px]",
           }}
           className="gap-[25px] lg:gap-[40px]"
         >
           <AccordionItem
             key="1"
             aria-label="Accordion 1"
+            aria-expanded={true}
             title="Apa itu Videfly?"
             indicator={<ChevronDown color="#B0B0B0" />}
+            onClick={() => exp !== 1 ? setExp(1) : setExp(0)}
+            className={`${exp == 1 ? 'bg-white ' : ''}`}
           >
             <p>
               Videfly adalah AI video content generator yang memudahkan bisnismu
@@ -57,22 +63,24 @@ export default function FAQComponent() {
             aria-label="Accordion 2"
             title="Berapa biaya Videfly?"
             indicator={<ChevronDown color="#B0B0B0" />}
+            onClick={() => exp !== 2 ? setExp(2) : setExp(0)}
+            className={`${exp == 2 ? 'bg-white ' : ''}`}
           >
             <p>
               Videfly menawarkan tiga paket yang disesuaikan dengan kebutuhan
               bisnismu:
               <br />
               <br />
-              •⁠ ⁠Starter: Gratis (Rp 0) Ideal untuk pemula yang ingin mencoba
+              •⁠ Starter: Gratis (Rp 0) Ideal untuk pemula yang ingin mencoba
               fitur dasar tanpa biaya. Cocok untuk uji coba dan proyek skala
               kecil.
               <br />
               <br />
-              •⁠ ⁠Booster: Rp 299.000 Pilihan tepat untuk bisnis yang ingin
+              •⁠ Booster: Rp 299.000 Pilihan tepat untuk bisnis yang ingin
               mengembangkan strategi pemasaran dengan fitur lebih canggih
               <br />
               <br />
-              •⁠ ⁠Master: Rp 499.000 Paket lengkap untuk bisnis yang serius,
+              •⁠ Master: Rp 499.000 Paket lengkap untuk bisnis yang serius,
               dengan akses ke semua fitur premium untuk hasil yang lebih optimal
               dan profesional.
             </p>
@@ -82,6 +90,8 @@ export default function FAQComponent() {
             aria-label="Accordion 3"
             title="Bagaimana cara menggunakan Videfly?"
             indicator={<ChevronDown color="#B0B0B0" />}
+            onClick={() => exp !== 3 ? setExp(3) : setExp(0)}
+            className={`${exp == 3 ? 'bg-white ' : ''}`}
           >
             <p>
               Menggunakan Videfly sangat mudah! Cukup ikuti langkah berikut:
@@ -105,6 +115,8 @@ export default function FAQComponent() {
             aria-label="Accordion 4"
             title="Bisakah Videfly membuat video produk untuk brand saya?"
             indicator={<ChevronDown color="#B0B0B0" />}
+            onClick={() => exp !== 4 ? setExp(4) : setExp(0)}
+            className={`${exp == 4 ? 'bg-white ' : ''}`}
           >
             <p>
               Tentu saja! Videfly dirancang khusus untuk membantu bisnismu
@@ -121,6 +133,8 @@ export default function FAQComponent() {
             aria-label="Accordion 5"
             title="Bisakah Videfly membuat video produk untuk brand saya?"
             indicator={<ChevronDown color="#B0B0B0" />}
+            onClick={() => exp !== 5 ? setExp(5) : setExp(0)}
+            className={`${exp == 5 ? 'bg-white ' : ''}`}
           >
             <p>
               Videfly menawarkan dua kategori fitur utama:

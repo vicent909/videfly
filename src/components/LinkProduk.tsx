@@ -4,7 +4,7 @@ export default function LinkProduk({title}: {title: string}) {
   return (
     <div className="relative p-[6px] w-fit">
       <div className="link-produk w-fit bg-primary-violet-50 px-[10px] border-[2px] border-image-gradient-custom border-gradient ">
-        <p className="font-nunito font-bold text-[30px] lg:text-[64px] bg-gradient-to-br from-[#7f52ff] to-[#FB8570] bg-clip-text text-transparent bg-clip- border-transparent">
+        <p className="font-nunito font-bold text-[30px] md:text-[40px] lg:text-[64px] bg-gradient-to-br from-[#7f52ff] to-[#FB8570] bg-clip-text text-transparent bg-clip- border-transparent">
           {title}
         </p>
       </div>

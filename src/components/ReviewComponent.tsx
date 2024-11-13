@@ -11,17 +11,15 @@ import {
   SelfmologyLogo,
 } from "@/assets";
 import { Arrow, Diamond } from "@/assets/SVG";
-import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import ReviewCard from "./ReviewCard";
 import { motion, useMotionValue } from "framer-motion";
 import useMeasure from "react-use-measure";
 
 export default function ReviewComponent() {
-  const [ref, { width, height }] = useMeasure();
+  const [ref, { width }] = useMeasure();
 
   const [selected, setSelected] = useState(0);
-  const [dragging, setDragging] = useState(false);
   const data = [
     {
       id: 0,
@@ -66,11 +64,7 @@ export default function ReviewComponent() {
   ];
 
   const dragx = useMotionValue(0);
-  const onDragStart = () => {
-    setDragging(true);
-  };
   const ondragend = () => {
-    setDragging(false);
     const x = dragx.get();
     
     if (x <= -10 && selected < data.length - 1) {
@@ -81,7 +75,7 @@ export default function ReviewComponent() {
   };
 
   return (
-    <div className="h-screen flex flex-col items-center lg:items-start lg:flex-row overflow-x-hidden">
+    <div className="h-fit lg:h-screen flex flex-col items-center lg:items-start lg:flex-row overflow-x-hidden">
       <div className="w-11/12 lg:w-5/12 py-[40px] lg:py-[100px] lg:px-[120px] flex flex-col items-center lg:items-start justify-between lg:h-full h-fit">
         <div className="flex flex-col items-center lg:items-start">
           <div className="flex items-center border-[1px] px-[11px] py-[2px] gap-[7px] rounded-full border-primary-violet-500 cursor-pointer w-fit">
@@ -145,13 +139,12 @@ export default function ReviewComponent() {
         </div>
       </div>
       <motion.div
-        className="w-11/12 lg:w-7/12 flex py-[10px] h-full"
+        className="w-11/12 lg:w-7/12 flex py-[10px] min-h-[412px]  h-full"
         drag="x"
         dragConstraints={{
           left: 0,
           right: 0,
         }}
-        onDragStart={onDragStart}
         onDragEnd={ondragend}
         style={{
           x: dragx,
@@ -167,7 +160,7 @@ export default function ReviewComponent() {
           {data.map((e, i) => {
             return (
               <motion.div
-                className="w-5/6 lg:w-7/12 flex-shrink-0"
+                className="w-5/6 md:w-4/6 lg:w-7/12 flex-shrink-0"
                 key={i}
                 // initial={{ opacity: 0, x: i < selected ? -100 : 100 }}
                 animate={{
